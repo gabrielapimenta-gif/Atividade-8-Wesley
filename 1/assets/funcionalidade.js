@@ -2,7 +2,7 @@ const inputField = document.getElementById('inputVetor');
 const btnProcessar = document.getElementById('btnProcessar');
 const consoleOutput = document.getElementById('console');
 
-// a. Função para ler o vetor e retornar os números informados
+// a. 
 function lerVetor() {
     const texto = inputField.value.trim();
     const vetor = texto.split(/\s+/).filter(x => x !== "").map(Number);
@@ -13,31 +13,31 @@ function lerVetor() {
     return vetor;
 }
 
-// b. Função que imprime do início para o fim
+// b. 
 function imprimirInicioFim(vetor) {
     consoleOutput.innerHTML += `-> Ordem direta: [${vetor.join(", ")}]\n`;
 }
 
-// c. Função que imprime do fim para o início
+// c. 
 function imprimirFimInicio(vetor) {
     const invertido = [...vetor].reverse();
     consoleOutput.innerHTML += `-> Ordem inversa: [${invertido.join(", ")}]\n`;
 }
 
-// d. Função que imprime valores nas posições ímpares (índices 1, 3, 5, 7, 9)
+// d. 
 function imprimirValoresIndicesImpares(vetor) {
     const valores = vetor.filter((_, index) => index % 2 !== 0);
     consoleOutput.innerHTML += `-> Valores nos índices ímpares: ${valores.join(", ")}\n`;
 }
 
-// e. Função que retorna a soma dos números nas posições pares (índices 0, 2, 4, 6, 8)
+// e. 
 function calcularSomaIndicesPares(vetor) {
     return vetor.reduce((soma, valor, index) => {
         return index % 2 === 0 ? soma + valor : soma;
     }, 0);
 }
 
-// f. Função que retorna o maior valor armazenado no vetor
+// f.
 function encontrarMaiorValor(vetor) {
     let maior = vetor[0];
     for (let i = 1; i < vetor.length; i++) {

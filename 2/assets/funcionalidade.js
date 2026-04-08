@@ -8,7 +8,8 @@ for (let i = 0; i < 25; i++) {
     input.className = 'cell';
     container.appendChild(input);
 }
-// a. Função para preencher a matriz e retorná-la
+
+// a. 
 function obterMatriz() {
     const inputs = document.querySelectorAll('.cell');
     let matriz = [];
@@ -21,7 +22,8 @@ function obterMatriz() {
     }
     return matriz;
 }
-// b. Função que imprime a matriz na tela
+
+// b. 
 function imprimirMatriz(matriz) {
     let texto = "--- MATRIZ COMPLETA ---\n";
     matriz.forEach(linha => {
@@ -30,21 +32,21 @@ function imprimirMatriz(matriz) {
     return texto + "\n";
 }
 
-// c. Elementos da diagonal principal (i == j)
+// c. 
 function diagonalPrincipal(matriz) {
     let elementos = [];
     for (let i = 0; i < 5; i++) elementos.push(matriz[i][i]);
     return `Diagonal Principal: ${elementos.join(", ")}\n`;
 }
 
-// d. Elementos da diagonal secundária (i + j == n - 1)
+// d.
 function diagonalSecundaria(matriz) {
     let elementos = [];
     for (let i = 0; i < 5; i++) elementos.push(matriz[i][4 - i]);
     return `Diagonal Secundária: ${elementos.join(", ")}\n`;
 }
 
-// e. Elementos das linhas ímpares (Índices 1 e 3)
+// e. 
 function linhasImpares(matriz) {
     let result = "Elementos das Linhas Ímpares (índices 1 e 3):\n";
     for (let i = 1; i < 5; i += 2) {
@@ -53,7 +55,7 @@ function linhasImpares(matriz) {
     return result + "\n";
 }
 
-// f. Elementos das colunas pares (Índices 0, 2, 4)
+// f. 
 function colunasPares(matriz) {
     let result = "Elementos das Colunas Pares (índices 0, 2, 4):\n";
     for (let i = 0; i < 5; i++) {
@@ -64,7 +66,7 @@ function colunasPares(matriz) {
     return result + "\n";
 }
 
-// g. Linhas pares e colunas ímpares
+// g. 
 function linhasParesColunasImpares(matriz) {
     let result = "Linhas Pares (0,2,4) e Colunas Ímpares (1,3):\n";
     for (let i = 0; i < 5; i += 2) {
